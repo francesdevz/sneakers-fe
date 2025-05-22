@@ -12,6 +12,9 @@ import { Shop2Outlined } from '@mui/icons-material';
  * @param {string} [props.to] Route path
  * @param {Array} [props.dropdownItems] Array of dropdown items: { label, to }
  * @param {string} [props.className] Optional class names
+ * @param {string} [props.pathName] Optional to detect the current url
+ * @param {Boolean} [props.isCart] Optional to determine if it is a cart icon
+ * @param {Object} [props.style] Optional style
  * @returns {JSX.Element}
  */
 export const LinkBarButton = ({ 
@@ -22,6 +25,7 @@ export const LinkBarButton = ({
     className = "", 
     pathName,
     isCart = false,
+    style = {},
     ...htmlProps 
 }) => {
     const [isOpen, setIsOpen] = useState(false);
@@ -37,7 +41,6 @@ export const LinkBarButton = ({
                     role="button"
                     data-bs-toggle="dropdown"
                     aria-expanded={isOpen}
-                    
                 >
                     {icon && <span className="me-2">{icon}</span>}
                     {label}
@@ -62,7 +65,12 @@ export const LinkBarButton = ({
     }
 
     return (
-        <Link to={to} className={`nav-link ${className} position-relative`} {...htmlProps}>
+        <Link 
+            to={to} 
+            className={`nav-link ${className} position-relative`} 
+            {...htmlProps} 
+            style={style}
+        >
 
             {/* Render label as usual */}
             {label}
@@ -81,6 +89,7 @@ export const LinkBarButton = ({
                     '& .MuiBadge-badge': {
                         backgroundColor: 'black',
                         color: 'white',
+                        fontSize: '10px'
                     },
                 }}
             >
