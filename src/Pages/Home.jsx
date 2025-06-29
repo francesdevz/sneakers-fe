@@ -7,7 +7,11 @@ import CustomerDivider from '../Component/CustomerDivider';
 const Home = () => {
     return (
         <>
-            <div>
+            <div
+                style={{
+                    backgroundColor: 'rgb(249,249,249)'
+                }}
+            >
                 <Hero />
                 <div 
                     className='container-md d-flex flex-column justify-content-center align-items-center text-center'
