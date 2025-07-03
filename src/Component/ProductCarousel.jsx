@@ -17,8 +17,7 @@ const style = {
   transform: 'translate(-50%, -50%)',
   width: '80vw',
   height: '80vh',
-  bgcolor: 'background.paper',
-  boxShadow: 24,
+  backgroundColor: 'transparent', 
   outline: 'none',
   display: 'flex',
   flexDirection: 'column',
@@ -30,12 +29,10 @@ const ProductCarousel = forwardRef((props, ref) => {
   const sliderRef = useRef();
   const [open, setOpen] = useState(false);
   const [images, setImages] = useState([]);
-  const [description, setDescription] = useState('');
 
   useImperativeHandle(ref, () => ({
-    open: ({ images = [], description = '' }) => {
+    open: ({ images = [] }) => {
       setImages(images);
-      setDescription(description);
       setOpen(true);
     },
     close: () => setOpen(false),

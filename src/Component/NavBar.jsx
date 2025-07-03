@@ -21,19 +21,6 @@ const Navbar = () => {
             </div>
             <div className='col-4 d-flex justify-content-around'>
                 <LinkBarButton label="Home" to="/" />
-                <LinkBarButton 
-                  label="Pages" 
-                  to="/pages" 
-                  dropdownItems={[
-                      { label: "Home", to: "/" },
-                      { label: "About", to: "/about" },
-                      { label: "Collections", to: "/collections" },
-                      { label: "Prices", to: "/prices" },
-                      { label: "Services", to: "/services" },
-                      { label: "Contact", to: "/contact" }
-                  ]}
-                  pathName={location.pathname}
-                />
                 <LinkBarButton label="Shop" to="/shop" />
                 <LinkBarButton label="Collections" to="/collections" />
                 <LinkBarButton 

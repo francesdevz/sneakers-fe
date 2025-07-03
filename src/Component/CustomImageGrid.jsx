@@ -18,8 +18,6 @@ import ProductCarousel from './ProductCarousel';
 
 const dividerData = () => [
 
-  
-
   {
     productImage: shop1To1,
     productSubImage: [
@@ -54,13 +52,37 @@ const dividerData = () => [
     productStocks: '',
     isProduct: false
   },
+  {
+    productImage: shop1To1,
+    productSubImage: [
+        {
+          img: shop1To2
+        },
+        {
+          img: shop1To3
+        },
+        {
+          img: shop1To4
+        },
+        {
+          img: shop1To5
+        },
+    ],
+    productOriginalPrice: '₱ 2,000.00',
+    productNewPrice: '₱ 999.00',
+    productDescription:
+      "Navigate city streets with ease in these urban-chic sneakers. With their trendy design and practical features, they're the ultimate footwear choice for urbanites on the move.",
+    productName: 'StreetSmart Ultra',
+    productStocks: '21',
+    isProduct: true
+  },
 ];
 
 /**
  * 
  * @returns {import('react').JSX.Element}
  */
-const CustomerDivider = () => {
+const CustomImageGrid = () => {
 
   const carouselRef = useRef();
 
@@ -118,8 +140,7 @@ const CustomerDivider = () => {
                   readOnly 
                   sx={{
                     fontSize: 20, 
-                    color: 'black', 
-                    backgroundColor: 'red'
+                    color: 'black',
                   }}
                  />
               </div>
@@ -308,4 +329,4 @@ const CustomerDivider = () => {
   );
 };
 
-export default CustomerDivider;
+export default CustomImageGrid;

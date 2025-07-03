@@ -2,7 +2,7 @@ import Hero from '../Component/Hero';
 import shoeHero from '../Common/Images/shoe-2-min.png';
 import { LinkBarButton } from '../Component/ActionButton';
 import { motion } from "framer-motion"; 
-import CustomerDivider from '../Component/CustomerDivider';
+import CustomImageGrid from '../Component/CustomImageGrid';
 
 const Home = () => {
     return (
@@ -59,7 +59,7 @@ const Home = () => {
                         />
                     </motion.div>
                 </div>
-                <CustomerDivider/>
+                <CustomImageGrid/>
             </div>
         </>
     );
